@@ -67,10 +67,10 @@ async function run() {
 
     // user update
     app.put('/user/:email', async (req, res) => {
-      const email = req.param.email;
+      const email = req.params.email;
       const user = req.body;
       const filter = { email: email };
-      const options = { upsert: true };
+      const options = { : true };
       const updateDoc = {
         $set: user,
       };
