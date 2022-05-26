@@ -54,7 +54,7 @@ async function run() {
     app.get('/myorder', async (req, res) => {
       const buyerEmail = req.query.email;
       const cursor = orderCollection.find({ buyerEmail });
-      const order = await cursor.toArray();
+      const order = await cursor.();
       res.send(order);
     })
     //  All user information dashboard api
