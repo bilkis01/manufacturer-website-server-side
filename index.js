@@ -196,18 +196,7 @@ async function run() {
 
 
 
-    // // tools product update
-    // app.put('/tools/:id', async (req, res) => {
-    //   const id = req.params.id;
-    //   const filter = { _id: ObjectId(id) };
-    //   const updateDoc = { set: id }
-    //   const options = { upsert: true }
-    //   const productUpdateTool = await toolCollection.updateOne(filter, updateDoc, options)
-    //   res.send(productUpdateTool);
-    //   console.log(productUpdateTool)
-
-    // })
-
+   
 
   } finally {
 
