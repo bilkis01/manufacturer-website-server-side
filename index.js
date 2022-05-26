@@ -169,10 +169,9 @@ async function run() {
      const id = req.params.id
       const result = await toolCollection.deleteOne({ _id: ObjectId(id)});
       res.send({ delete: "success" });
+      console.log(result)
     
     });
-
-
 
     // payment api
 
