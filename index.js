@@ -59,7 +59,7 @@ async function run() {
     })
     //  All user information dashboard api
     app.get('/allorder', async (req, res) => {
-     
+
       const cursor = orderCollection.find({});
       const order = await cursor.toArray();
       res.send(order);
@@ -90,7 +90,7 @@ async function run() {
 
     })
 
-    //make admin user
+    //  make a admin users
     app.put("/admin/:email", async (req, res) => {
       const email = req.params.email;
       const makeAdmin = req.body;
@@ -158,19 +158,19 @@ async function run() {
 
     // manage order delete
     app.delete("/allorder/:id", async (req, res) => {
-     const id = req.params.id
-      const result = await orderCollection.deleteOne({ _id: ObjectId(id)});
+      const id = req.params.id
+      const result = await orderCollection.deleteOne({ _id: ObjectId(id) });
       res.send({ delete: "success" });
       console.log(result);
     });
 
 
     app.delete("/tools/:id", async (req, res) => {
-     const id = req.params.id
-      const result = await toolCollection.deleteOne({ _id: ObjectId(id)});
+      const id = req.params.id
+      const result = await toolCollection.deleteOne({ _id: ObjectId(id) });
       res.send({ delete: "success" });
       console.log(result)
-    
+
     });
 
     // payment api
@@ -193,7 +193,7 @@ async function run() {
 
 
 
-   
+
 
   } finally {
 
