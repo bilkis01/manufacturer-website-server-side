@@ -169,7 +169,7 @@ async function run() {
      const id = req.params.id
       const result = await toolCollection.deleteOne({ _id: ObjectId(id)});
       res.send({ delete: "success" });
-      console.log(result);
+    
     });
 
 
@@ -180,7 +180,6 @@ async function run() {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const order = await orderCollection.findOne(query);
-      // console.log(result)
       res.send(order)
     })
 
